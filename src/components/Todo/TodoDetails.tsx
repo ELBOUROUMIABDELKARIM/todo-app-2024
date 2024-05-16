@@ -1,7 +1,6 @@
-import FloatingButton from "../UI/FloatingButton";
 import { useNavigate, useLocation } from "react-router";
 
-export default function TodoDetails({ onLogout }) {
+export default function TodoDetails() {
     const navigate = useNavigate();
     const location = useLocation();
     const todo = location.state.todo;
@@ -24,7 +23,6 @@ export default function TodoDetails({ onLogout }) {
 
     return (
         <>
-            <FloatingButton onLogout={onLogout} />
             <div className="about d-flex align-items-center justify-content-center">
                 <div className="row">
                     <div className="col">

@@ -1,10 +1,14 @@
-import FloatingButton from "../components/UI/FloatingButton";
+import { useAuthStore } from "../App";
 import DevInfo from "../components/DevInfo/DevInfo";
 
-export default function About({onLogout}) {
+export default function About() {
+
+    const {logout} = useAuthStore()
+
+
+
     return (
         <>
-            <FloatingButton onLogout={onLogout} />
             <div className="about d-flex align-items-center justify-content-center">
                 <div className="row">
                     <div className="col">
@@ -20,7 +24,7 @@ export default function About({onLogout}) {
                         <br/>
                         <hr className="custom-hr" />
                         <br/>
-                        <DevInfo onLogout={onLogout} />
+                        <DevInfo onLogout={logout} />
                     </div>
                 </div>
             </div>
